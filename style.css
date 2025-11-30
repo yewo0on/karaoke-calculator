@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculator-container {
+  position: relative;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+h1 {
+  color: #cc0000;
+}
+
+h2 {
+  padding-left: 10px;
+  font-size: 1.2em;
+  text-align-last: left;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* 양 끝 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  margin-bottom: 35px; /* 기존 h1의 마진 */
+}
+
+.reset-button {
+  padding: 7px 10px;
+  font-size: 1.1em;
+  width: auto !important;
+  margin: 0;
+  background-color: #4f6be7;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.reset-button:hover {
+  background-color: #2e48bd;
+}
+/* 기존 버튼(#cc0000)과의 구별을 위해 추가 */
+.input-group button {
+  width: 25%;
+  float: right;
+  padding: 10px 0;
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.input-group button:hover {
+  background-color: #aa0000;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="number"],
+select {
+  width: calc(75% - 10px); /* 버튼과 함께 정렬을 위해 너비 조정 */
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+.result {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3656e6;
+  margin-bottom: 25px;
+}
+
+.result-highlight {
+  color: #cc0000;
+}
+
+.calculation-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.price-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.price-list > div {
+  padding: 15px;
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.song-wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.price-list h2 {
+  color: #333;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.price-list li {
+  font-size: 0.95em;
+}

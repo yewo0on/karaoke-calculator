@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>코인 노래방 계산기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <header class="header">
+        <h1>🎤 노래방 가격 계산기</h1>
+        <button
+          id="reset-button"
+          class="reset-button"
+          onclick="resetCalculator()">
+          &#x21BB;
+        </button>
+      </header>
+
+      <div class="input-group">
+        <label for="time-select">⏱️ 시간대 선택 (곡수 계산 시 적용):</label>
+
+        <select id="time-select">
+          <option value="before22">22시 이전 (1천원당 5곡)</option>
+          <option value="after22">22시 이후 (1천원당 4곡)</option>
+        </select>
+      </div>
+
+      <hr />
+
+      <!-- 금액 계산 -->
+      <div class="input-group">
+        <label for="price-input">💰 금액 입력 (원):</label>
+        <input type="number" id="price-input" min="0" placeholder="예: 5000" />
+        <button onclick="calculateByPrice()">금액으로 계산</button>
+      </div>
+
+      <!-- 곡수 계산 -->
+      <p class="result" id="songs-result-price"></p>
+      <div class="input-group">
+        <label for="songs-input">🎶 곡 수 입력 (곡):</label>
+        <input type="number" id="songs-input" min="0" placeholder="예: 20" />
+        <button onclick="calculateBySongs()">곡수로 계산</button>
+      </div>
+
+      <!-- 시간 계산 -->
+      <p class="result" id="price-result-songs"></p>
+      <div class="input-group">
+        <label for="time-input">⏰ 시간 입력 (분):</label>
+        <input type="number" id="time-input" min="1" placeholder="예: 60" />
+        <button onclick="calculateByTime()">시간으로 계산</button>
+      </div>
+      <p class="result" id="price-result-time"></p>
+
+      <hr />
+
+      <h2>🏷️ 가격표</h2>
+      <div class="price-list">
+        <div class="song-info">
+          <h2>🎵 고정 시간 상품 정보</h2>
+          <div class="song-wrap">
+            <ul>
+              <li>(22시 이전)</li>
+              <li>5곡: 1,000원</li>
+              <li>10곡: 2,000원</li>
+              <li>15곡: 3,000원</li>
+              <li>25곡: 5,000원</li>
+            </ul>
+            <ul>
+              <li>(22시 이후)</li>
+              <li>4곡: 1,000원</li>
+              <li>8곡: 2,000원</li>
+              <li>12곡: 3,000원</li>
+              <li>20곡: 5,000원</li>
+            </ul>
+          </div>
+        </div>
+        <div class="time-info">
+          <h2>⏳ 고정 시간 상품 정보</h2>
+          <ul>
+            <li>(시간대 무관)</li>
+            <li>35분: **3,000원**</li>
+            <li>70분: **5,000원**</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
