@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px; /* 기본 글자 크기 설정 */
   background-color: #f4f4f9;
   display: flex;
   justify-content: center;
@@ -32,7 +33,7 @@ h1 {
 }
 
 h2 {
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 1.2em;
   text-align-last: left;
 }
@@ -45,20 +46,22 @@ h2 {
 }
 
 .reset-button {
-  padding: 7px 10px;
-  font-size: 1.1em;
+  padding: 5px 8px;
+  font-size: 1.2em;
   width: auto !important;
   margin: 0;
   background-color: #4f6be7;
   border: none;
   color: white;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .reset-button:hover {
   background-color: #2e48bd;
 }
+
 /* 기존 버튼(#cc0000)과의 구별을 위해 추가 */
 .input-group button {
   width: 25%;
@@ -72,6 +75,7 @@ h2 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .input-group button:hover {
   background-color: #aa0000;
 }
@@ -139,7 +143,12 @@ hr {
   gap: 20px;
 }
 
-.price-list h2 {
+.price-list ul {
+  text-align: center;
+}
+
+.price-list h3 {
+  text-align: center;
   color: #333;
   font-size: 1em;
   margin-bottom: 5px;
@@ -147,4 +156,19 @@ hr {
 
 .price-list li {
   font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+  /* 화면 너비가 768px 이하일 때만 이 스타일을 적용 */
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .calculation-info {
+    font-size: 0.8em;
+  }
 }
